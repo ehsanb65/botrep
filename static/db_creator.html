@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DB Creator Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/db_creator.js"></script>
+</head>
+<body>
+
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>DB Creator</h1>
+        <div id="login_signup">
+
+            <div style="width: 40%; margin: auto; display: inline-block;margin-left: 5%">
+                <h3>
+                <span id="pageTitle">Enter New Word Information:</span><span id="idToEdit"></span>
+                </h3>
+
+                <form id="word_form">
+                    Word : <br/>
+                    <input class="form-control" type="text" id="word" value=""/><br/>
+                    Word Definition : <br/>
+                    <input class="form-control" type="text" id="word_def" value=""/><br/>
+                    Word Definition Farsi : <br/>
+                    <input class="form-control" type="text" id="word_def_fa" value=""/><br/>
+                    Example Sentence : <br/>
+                    <input class="form-control" type="text" id="example" value=""/><br/>
+                    Example Farsi : <br/>
+                    <input class="form-control" type="text" id="example_fa" value=""/><br/>
+                    Meaning Noun :
+                    <div class="input-group">
+                        <span class="input-group-addon"><input type="checkbox" id="word_noun_check" value="word_noun"></span>
+                        <input class="form-control" type="text" id="word_noun" value="" disabled /><br/>
+                    </div>
+                    <br />
+                    Meaning Adjective :
+                    <div class="input-group">
+                        <span class="input-group-addon"><input type="checkbox" id="word_adj_check" value="word_adj"></span>
+                        <input class="form-control" type="text" id="word_adj" value="" disabled /><br/>
+                    </div>
+                    <br />
+                    Meaning Verb :
+                    <div class="input-group">
+                        <span class="input-group-addon"><input type="checkbox" id="word_verb_check" value="word_verb"></span>
+                        <input class="form-control" type="text" id="word_verb" value="" disabled /><br/>
+                    </div>
+                    <br />
+                    Meaning Adverb :
+                    <div class="input-group">
+                        <span class="input-group-addon"><input type="checkbox" id="word_adv_check" value="word_adv"></span>
+                        <input class="form-control" type="text" id="word_adv" value="" disabled /><br/>
+                    </div>
+                    <br />
+                    Meaning Slang :
+                    <div class="input-group">
+                        <span class="input-group-addon"><input type="checkbox" id="word_slang_check" value="word_slang"></span>
+                        <input class="form-control" type="text" id="word_slang" value="" disabled /><br/>
+                    </div>
+                    <br />
+                    Meaning Comment :
+                    <div class="input-group">
+                        <span class="input-group-addon"><input type="checkbox" id="word_comment_check" value="word_comment"></span>
+                        <input class="form-control" type="text" id="word_comment" value="" disabled /><br/>
+                    </div>
+                    <br />
+                    <br/>
+                    <input class="btn btn-primary" id="save" type="button" value="Save"/>
+                    <input style="margin-left: 15px;width: 65px" class="btn btn-success" id="edit" type="button" value="Edit"/>
+
+                </form>
+                <br/>
+                <br/>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="alert alert-danger" style="text-align: center;display: none"></div>
+<div class="alert alert-success" style="text-align: center;display: none"></div>
+
+
+<div style="border:1px solid #e2e2e2;margin: 1%;padding: 1%" id="savedWords_div">
+    <input style="margin-left: 15px;width: 120px" class="btn btn-success" id="showWords" type="button" value="Saved Words"/><br />
+    <br />
+    <table cellpadding="2" valign="center" align="center" style="text-align: center" border="2" id="savedWords">
+
+
+    </table>
+
+</div>
+
+
+
+
+
+<br /><br />
+
+<!--<div style="font-size: 20px;color: darkgreen" id="info">
+    info:<br/>
+
+</div>-->
+
+</body>
+</html>
